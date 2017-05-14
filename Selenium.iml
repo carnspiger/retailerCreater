@@ -9,5 +9,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="java-json" level="project" />
     <orderEntry type="library" exported="" name="testng-6.8.5" level="project" />
+    <orderEntry type="library" exported="" name="org.apache.poi:poi-ooxml:3.11-beta2" level="project" />
   </component>
 </module>

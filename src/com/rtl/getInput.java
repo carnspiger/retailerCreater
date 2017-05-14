@@ -1,0 +1,44 @@
+package com.rtl;
+
+import java.util.Scanner;
+
+/**
+ * Created by caitlin.ye on 5/13/17.
+ */
+public class getInput {
+    private Scanner scanner;
+
+    //get user input
+    /*
+    public int numRetailers(){
+        System.out.print("Enter the number of retailers: ");
+        scanner = new Scanner(System.in);
+        int nRtl = scanner.nextInt();  //gets num rtls from user
+        if (nRtl <= 0 ) {
+            throw new IllegalArgumentException("Must enter number greater than 0.");
+        }
+        return nRtl;
+    }*/
+    public String getAPIkey(){
+        System.out.print("Enter your API-key: ");
+        scanner = new Scanner(System.in);
+        String APIkey = scanner.nextLine();
+        return APIkey;
+    }
+    public String getAuthorize(){
+        System.out.print("Enter your authorization: Bearer ");
+        scanner = new Scanner(System.in);
+        String authorization = scanner.nextLine();
+        return authorization;
+    }
+
+    //TODO get excel workbook
+    public String input(){
+        System.out.print("Enter input file path: ");
+        scanner = new Scanner(System.in);
+        String inputFile = scanner.nextLine();
+        return inputFile;
+    }
+
+
+}
