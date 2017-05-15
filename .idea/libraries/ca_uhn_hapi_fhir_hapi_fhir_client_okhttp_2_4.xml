@@ -1,0 +1,25 @@
+<component name="libraryTable">
+  <library name="ca.uhn.hapi.fhir:hapi-fhir-client-okhttp:2.4" type="repository">
+    <properties maven-id="ca.uhn.hapi.fhir:hapi-fhir-client-okhttp:2.4" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/hapi-fhir-client-okhttp-2.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/hapi-fhir-base-2.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/gson-2.8.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/woodstox-core-asl-4.4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/stax-api-1.0-2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/stax2-api-3.1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-lang3-3.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-codec-1.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-io-2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/slf4j-api-1.7.25.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jcl-over-slf4j-1.7.25.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/hapi-fhir-structures-dstu2-2.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/hapi-fhir-structures-dstu3-2.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/xpp3_min-1.1.4c.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/okhttp-3.4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/okio-1.9.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

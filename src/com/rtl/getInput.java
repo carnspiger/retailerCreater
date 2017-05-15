@@ -33,11 +33,28 @@ public class getInput {
     }
 
     //TODO get excel workbook
-    public String input(){
+    public String inputFilePath(){
         System.out.print("Enter input file path: ");
         scanner = new Scanner(System.in);
         String inputFile = scanner.nextLine();
         return inputFile;
+    }
+
+
+    public int getManID(){
+        System.out.print("Enter manufacturer ID: ");
+        scanner = new Scanner(System.in);
+        String manufacturerID = scanner.nextLine();
+        int manID = Integer.parseInt(manufacturerID);
+        return manID;
+    }
+
+    public int getCatID(){
+        System.out.print("Enter catalog ID: ");
+        scanner = new Scanner(System.in);
+        String catalogID = scanner.nextLine();
+        int catID = Integer.parseInt(catalogID);
+        return catID;
     }
 
 

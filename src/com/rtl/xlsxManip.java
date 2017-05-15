@@ -5,10 +5,7 @@ import java.io.FileOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.Set;
-import java.util.Date;
+import java.util.*;
 
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -30,9 +27,11 @@ public class xlsxManip {
         XSSFSheet mySheet = myWorkBook.getSheetAt(0);
         //use saveRetailer
         Map<String, Object[]> data = new HashMap<String, Object[]>();
+        /*
         data.put("7", new Object[] {7d, "Sonya", "75K", "SALES", "Rupert"});
         data.put("8", new Object[] {8d, "Kris", "85K", "SALES", "Rupert"});
         data.put("9", new Object[] {9d, "Dave", "90K", "SALES", "Rupert"});
+        */
         // Set to Iterate and add rows into XLS file
         Set<String> newRows = data.keySet();
         // get the last row number to append new data
@@ -69,9 +68,10 @@ public class xlsxManip {
 
 
     //TODO rtl from spreadsheet save in String arr, change func type
-    public int[] fromXLSX() throws IOException {
+    public int fromXLSX() throws IOException {
         int rowCounter = 0;
         int colCounter = 0;
+        HashMap<Integer, Cell> trackColumns = new HashMap<>();
         //TODO make GUI for upload
 
         File myFile = new File("/Users/caitlin.ye/Desktop/test.xlsx"); //TODO change to user input later
@@ -83,18 +83,35 @@ public class xlsxManip {
         // Get iterator to all the rows in current sheet
         Iterator<Row> rowIterator = mySheet.iterator();
         // Traversing over each row of XLSX file
+        Row row = rowIterator.next(); //starts at 2nd row
         while (rowIterator.hasNext()) {
-            Row row = rowIterator.next();
+            row = rowIterator.next();
             rowCounter++;
             // For each row, iterate through each columns
             Iterator<Cell> cellIterator = row.cellIterator();
             while (cellIterator.hasNext()) {
+                Cell cell = cellIterator.next();
+//TODO
+                switch (cell.getCellType()) {
+                    case Cell.CELL_TYPE_STRING:
+                        //cell = cell.getStringCellValue();
+                        break;
+                        case Cell.CELL_TYPE_NUMERIC:
+                            System.out.print(cell.getNumericCellValue() + "\t");
+                            break;
+                        case Cell.CELL_TYPE_BOOLEAN:
+                            System.out.print(cell.getBooleanCellValue() + "\t");
+                            break;
+                        default :
+                }
+
+                trackColumns.put(colCounter, cell);
                 colCounter++;
             }
         }
-            //spreadsheet with headers in this order: vendor, name, phone, email
-            //rowCounter -= 1;
-            return new int[]{rowCounter, colCounter};
+
+            //TODO return this from a diff func return rowCounter;
+        return rowCounter;
     }
 
 }
